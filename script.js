@@ -46,7 +46,7 @@ function falarAjuda() {
     falar("instruções: Use as teclas númericas para digitar. Use as teclas mais, menos, asterisco para multiplicar e barra para dividir. pressione enter para o resultado e Esc para limpar.");
 }
 
-function calcularResultados() {
+function calcularResultado() {
     try {
         if (!expressaoAtual) return;
 
@@ -62,7 +62,7 @@ function calcularResultados() {
         }
 
         falar("Igual a " + resultado);
-        expressaoAtual = resultado.tostring();
+        expressaoAtual = resultado.toString();
         atualizarVisor();
     } catch (erro) {
         falar("erro na conta.");
