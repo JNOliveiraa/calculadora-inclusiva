@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Acessível de Extensão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="Calculadora-container">
+        <h1 class="titulo-acessivel">Calculadora Acessível por voz</h1>
+
+        <div id="visor" class="visor" aria-live="assertive" aria-label="Visor da calculadora zerado">0</div>
+
+        <div class="teclado">
+            <button onclick="limpar()" aria-label="Limpar tudo">C</button>
+            <button onclick="falarAjuda()" aria-label="Ouvir instruções de ajuda">Ajuda</button>
+            <button onclick="definirOperacao('/')" aria-label="Dividir por">/</button>
+            <button onclick="definirOperacao('*')" aria-label="Multiplicar por">x</button>
+
+            <button onclick="pressionarNumero('7')">7</button>
+            <button onclick="pressionarNumero('8')">8</button>
+            <button onclick="pressionarNumero('9')">9</button>         
+            <button onclick="definirOperacao('-')" aria-label="Menor">-</button>
+
+            <button onclick="pressionarNumero('4')">4</button>
+            <button onclick="pressionarNumero('5')">5</button>
+            <button onclick="pressionarNumero('6')">6</button>            
+            <button onclick="definirOperacao('+')" aria-label="Mais">+</button>
+
+            <button onclick="pressionarNumero('1')">1</button>
+            <button onclick="pressionarNumero('2')">2</button>           
+            <button onclick="pressionarNumero('3')">3</button>
+            <button id="btn-igual" onclick="calcularResultado()" arial-label="igual, calcular resultado">=</button>
+
+            <button onclick="pressionarNumero('0')" class="botao-zero">0</button>
+        
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
